@@ -1,0 +1,8 @@
+services:
+  discordbot:
+    build: .
+    container_name: discord_bot
+    restart: unless-stopped
+    environment:
+      - TZ=UTC
+    # Optional: mount external config or token securely
