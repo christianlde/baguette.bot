@@ -13,7 +13,8 @@ async def on_ready():
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send("Pong!")
+    latency = bot.latency * 1000  # Convert to milliseconds
+    await ctx.send(f"Pong! Latency is {latency:.2f} ms")
 
 import os
 bot.run(os.getenv("DISCORD_TOKEN"))
